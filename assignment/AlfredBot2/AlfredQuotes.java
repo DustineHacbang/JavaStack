@@ -1,6 +1,5 @@
-package Alfred_bot;
 
-import java.util.Date;
+
 public class AlfredQuotes {
     
     public String basicGreeting() {
@@ -8,10 +7,16 @@ public class AlfredQuotes {
         return "Hello, lovely to see you. How are you?";
     }
     
-    public String guestGreeting(String name) {
+    public String guestGreeting(String name, String dayPeriod) {
         // YOUR CODE HERE
-        return "place holder for guest greeting return string";
+        return "Hello" + name +"! Good " + dayPeriod + "!";
     }
+
+
+    // public String guestGreeting(String name, String dayPeriod) {
+    //     // YOUR CODE HERE
+    //     return "place holder for guest greeting return string";
+    // }
     
     public String dateAnnouncement() {
         // YOUR CODE HERE
@@ -23,9 +28,6 @@ public class AlfredQuotes {
         return "for snarky response return string";
     }
     
-    // NINJA BONUS
-    // See the specs to overload the guessGreeting method
-    // SENSEI BONUS
-    // Write your own AlfredQuote method using any of the String methods you have learned!
+
 }
 
