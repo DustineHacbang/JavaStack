@@ -6,6 +6,9 @@ public class BankAccountTest{
         dustineAccount.deposit("Saving Account",50);
         System.out.println(dustineAccount.getCheckingBalance());
         System.out.println(dustineAccount.getSavingBalance());
+        dustineAccount.withdraw("Saving Account",25);
+        System.out.println(dustineAccount.getCheckingBalance());
+        System.out.println(dustineAccount.getSavingBalance());
 
     }
 }
