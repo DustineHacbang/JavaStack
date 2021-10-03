@@ -16,7 +16,7 @@ public class BankAccount{
 
     }
 
-        public String getUserName(){
+    public String getUserName(){
         return this.userName;
     }
 
@@ -33,11 +33,11 @@ public class BankAccount{
     public void deposit(String accountType, int amount){
         if(accountType.equals("Saving Account")){
             savingBalance += amount;
-            System.out.println("Your saving account current balance is  " + savingBalance);
+            System.out.println("Your saving account current balance is  " + this.savingBalance);
         }
         if(accountType.equals("Checking Account")){
             checkingBalance += amount;
-            System.out.println("Your checking account current balance is  " + checkingBalance);
+            System.out.println("Your checking account current balance is  " + this.checkingBalance);
         }
     }
     public void withdraw(String accountType, int amount){
@@ -45,10 +45,9 @@ public class BankAccount{
             if(savingBalance < amount){
                 System.out.println("Insufficent Funds");
                 } 
-                
                 else {
                     savingBalance -= amount;
-                    System.out.println("Your saving account current balance is" + savingBalance);
+                    System.out.println("Your saving account current balance is   " + savingBalance);
                     }
         }
         if(accountType.equals("Checking Account")){
@@ -58,7 +57,7 @@ public class BankAccount{
                 
                 else {
                     checkingBalance -= amount;
-                    System.out.println("Your checking account current balance is" + checkingBalance);
+                    System.out.println("Your checking account current balance is   " + checkingBalance);
                     }
         
         }
