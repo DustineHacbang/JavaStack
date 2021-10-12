@@ -21,12 +21,15 @@
 </head>
 <body>
 	<h1>Send an Omikuji</h1>
-	<form action="/" method="post">
+	<form action="/submit" method="post">
 	
 	
 	<h2>Pick any number from 5 to 25</h2>
-	<input type="number" id="quantity" name="quantity" min="5" max="25">
+	<input type="number" id="number" name="number" min="5" max="25">
 		
+	<h2>Enter name of a city</h2>
+	<input type="text" name="city" id="city"/>
+	
 	<h2>Enter name of a real person</h2>
 	<input type="text" name="person" id="person"/>
 	
@@ -39,7 +42,7 @@
 	<h2>Say something nice to someone</h2>
 	<input type="text" name="compliment" id="compliment"/>
 	
-	<h2>-----------------------------------------</h2>
+	<h2>___________________________________________________</h2>
 	<button class="btn btn-success">Send</button>
 	
 	
