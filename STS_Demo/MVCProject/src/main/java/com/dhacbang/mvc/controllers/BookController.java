@@ -1,5 +1,7 @@
 package com.dhacbang.mvc.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,4 +28,14 @@ public class BookController {
 		return "index.jsp";
 	}
 
+	@GetMapping("/books/allBooks")
+	public String index(Model model) {
+		List<Book> books = bServ.getAll();
+		System.out.println(books);
+		
+		model.addAttribute("books",books);
+		
+		return "index.jsp";
+	}
+	
 }
