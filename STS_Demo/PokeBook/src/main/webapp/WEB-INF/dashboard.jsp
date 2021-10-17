@@ -42,9 +42,9 @@
 							<td><c:out value="${ item.vendor }"/></td>
 							<td><c:out value="${ item.amount }"/></td>
 							<td>
-								<a href="/dogs/${item.id }">View</a>|
-								<a href="/dogs/${item.id }/edit"> Edit </a>|
-								<a href="/dogs/${item.id }/delete">Delete</a>|
+								<a href="/items/${item.id }">View</a>|
+								<a href="/items/${item.id }/edit"> Edit </a>|
+								<a href="/items/${item.id }/delete">Delete</a>|
 							</td>
 						
 

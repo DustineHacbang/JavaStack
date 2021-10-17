@@ -28,7 +28,7 @@
 		
 		<div class="main">
 			<h2>Edit An Expenses</h2>
-			<form:form action="/dogs/${ dog.id }/update" method="post" modelAttribute="item">
+			<form:form action="/items/${ dog.id }/update" method="post" modelAttribute="item">
 			<input type="hidden" name="_method" value="put" />
 				<div class="form=group">
 					<form:label path="name">Expense Name</form:label>

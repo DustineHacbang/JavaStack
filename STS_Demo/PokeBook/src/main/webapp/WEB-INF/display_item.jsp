@@ -35,8 +35,8 @@
 				
 			</ul>
 		</div>
-		<a href="/dogs/${item.id }/edit"> Edit </a>|
-		<a href="/dogs/${item.id }/delete">Delete</a>|
+		<a href="/items/${item.id }/edit"> Edit </a>|
+		<a href="/items/${item.id }/delete">Delete</a>|
 	</div>
 </body>
 </html>
