@@ -25,9 +25,10 @@
 			<h1>The Kennel</h1>
 			<a href="/dog/new">Add a Dog</a>
 			<a href="/collars/new">Add a Collar</a>
+			<a href="/logout">Log Out</a>
 		</div>
 		<div>
-			<h2>Here are the dogs in the kennel:</h2>
+			<h2>Welcome to the Kennel </h2>
 			<table class="table">
 				<thead>
 					<tr>

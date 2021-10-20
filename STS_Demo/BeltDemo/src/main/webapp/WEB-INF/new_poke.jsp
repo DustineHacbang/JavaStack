@@ -19,34 +19,32 @@
     <!-- YOUR own local CSS -->
     <link rel="stylesheet" href="/css/style.css"/>
 </head>
-<body>
-	<div class="container">
-		<div class="header d-flex justify-content-between  align-items-centers">
-			<h1>The Kennel</h1>
+<div class="container">
+		<div class="header d-flex justify-content-between align-items-center">
+			<h1>Create a Pokemon!</h1>
 			<a href="/dashboard">Dashboard</a>
+			<a href="/logout">logout</a>
 		</div>
-		
 		<div class="main">
-			<h2 class="">Here is information of Dog <c:out value="${dog.name}"></c:out></h2>
-			<ul class="">
-			 
-				<li class="">Age:<c:out value="${ dog.age }"></c:out></li> 
-				<li class="">Hair Color: <c:out value="${dog.hairColor}"/> </li>
-				
-			</ul>
-			
-			<h2>This Dog's Collars:</h2>
-			
-			<ul>
-				<c:forEach items="${dog.collars }" var="collar">
-					<li><c:out value ="${collar.color }"/></li>
-				</c:forEach>
-			</ul>
-			<h3>The Number of Collars this dog owns is: <c:out value="${dog.collars.size() }"></c:out></h3>
-			<p>Created By: <c:out value="${ dog.creator.firstName }" /></p>
+			<form:form action="/pokemon/create" method="post" modelAttribute="newPokemon">
+				<div class="form-group">
+					<form:label path="name">Name:</form:label>
+					<form:input type="text" path="name" />
+					<form:errors class="text-danger" path="name" />
+				</div>
+				<div class="form-group">
+					<form:label path="type">Type:</form:label>
+					<form:input type="text" path="type" />
+					<form:errors class="text-danger" path="type" />
+				</div>
+				<div class="form-group">
+					<form:label path="level">Level:</form:label>
+					<form:input type="number" path="level" min="1" max="120" value="1"/>
+					<form:errors class="text-danger" path="level" />
+				</div>
+				<button class="btn btn-warning">Create!</button>
+			</form:form>
 		</div>
-		<a href="/dogs/${dog.id }/edit"> Edit </a>|
-		<a href="/dogs/${dog.id }/delete">Delete</a>|
 	</div>
 </body>
 </html>

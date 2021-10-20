@@ -21,20 +21,20 @@ public class DogController {
 	@Autowired
 	private DogService serv;
 	
-	@GetMapping("/")
-	public String Index() {
-		return "redirect:/dashboard";
-	}
+//	@GetMapping("/")
+//	public String Index() {
+//		return "redirect:/dashboard";
+//	}
 	
 	//Display______________________________
 	
-	@GetMapping("/dashboard")
-	public String dashboard(Model model) {
-		model.addAttribute("allDogs", serv.getAll());
-		
-		return "dashboard.jsp";
-		
-	}
+//	@GetMapping("/dashboard")
+//	public String dashboard(Model model) {
+//		model.addAttribute("allDogs", serv.getAll());
+//		
+//		return "dashboard.jsp";
+//		
+//	}
 	
 	@GetMapping("/dog/new")
 	public String newDog(@ModelAttribute("dog") Dog dog) {

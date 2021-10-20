@@ -21,32 +21,17 @@
 </head>
 <body>
 	<div class="container">
-		<div class="header d-flex justify-content-between  align-items-centers">
-			<h1>The Kennel</h1>
+		<div class="header d-flex justify-content-between align-items-center">
+			<h1>Hello <c:out value="${ loggedInUser.firstName }" />, Welcome to Poke Creator!</h1>
 			<a href="/dashboard">Dashboard</a>
+			<a href="/logout">logout</a>
 		</div>
-		
 		<div class="main">
-			<h2 class="">Here is information of Dog <c:out value="${dog.name}"></c:out></h2>
-			<ul class="">
-			 
-				<li class="">Age:<c:out value="${ dog.age }"></c:out></li> 
-				<li class="">Hair Color: <c:out value="${dog.hairColor}"/> </li>
-				
-			</ul>
-			
-			<h2>This Dog's Collars:</h2>
-			
-			<ul>
-				<c:forEach items="${dog.collars }" var="collar">
-					<li><c:out value ="${collar.color }"/></li>
-				</c:forEach>
-			</ul>
-			<h3>The Number of Collars this dog owns is: <c:out value="${dog.collars.size() }"></c:out></h3>
-			<p>Created By: <c:out value="${ dog.creator.firstName }" /></p>
+			<h2>Here is the information for the pokemon: <c:out value="${ pokemon.name }" /></h2>
+			<p>Type: <c:out value="${ pokemon.type }" /></p>
+			<p>Level: <c:out value="${ pokemon.level }" /></p>
+			<p>Created By: <c:out value="${ pokemon.creator.firstName }" /></p>
 		</div>
-		<a href="/dogs/${dog.id }/edit"> Edit </a>|
-		<a href="/dogs/${dog.id }/delete">Delete</a>|
 	</div>
 </body>
 </html>
